@@ -1,0 +1,22 @@
+# 不迁移：本地下载、密钥、缓存、环境特定与个人隐私文件
+downloads/
+memory_consolidation/
+skills/
+BIllion/
+USER.md
+TOOLS.md
+BOOTSTRAP.md
+HEARTBEAT.md
+.openclaw/
+*.jsonl
+*.sqlite
+*.sqlite3
+*.db
+*.env
+.env*
+*.key
+*.pem
+*.p12
+*.pfx
+__pycache__/
+.DS_Store
