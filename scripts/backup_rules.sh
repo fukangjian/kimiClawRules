@@ -32,3 +32,8 @@ if ! git diff --quiet -- exports/rules scripts/backup_rules.sh; then
   git add exports/rules scripts/backup_rules.sh || true
   git commit -m "备份规则迁移包" || true
 fi
+
+# 若已配置 GitHub 远端且本机有权限，则顺手推送；失败不阻断本地备份。
+if git remote get-url origin >/dev/null 2>&1; then
+  git push origin master:main || echo 'GitHub push skipped/failed; local backup committed.'
+fi
